@@ -83,15 +83,61 @@
 <dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeControllerPolyDriver">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyicub.controllers.gaze.</span></span><span class="sig-name descname"><span class="pre">GazeControllerPolyDriver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">robot</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyicub.controllers.gaze.GazeControllerPolyDriver" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>GazeControllerPolyDriver is a helper class to manage the YARP PolyDriver for the gaze controller.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeControllerPolyDriver.__pid__">
+<span class="sig-name descname"><span class="pre">__pid__</span></span><a class="headerlink" href="#pyicub.controllers.gaze.GazeControllerPolyDriver.__pid__" title="Link to this definition"></a></dt>
+<dd><p>Process ID (unique identifier).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeControllerPolyDriver.__props__">
+<span class="sig-name descname"><span class="pre">__props__</span></span><a class="headerlink" href="#pyicub.controllers.gaze.GazeControllerPolyDriver.__props__" title="Link to this definition"></a></dt>
+<dd><p>Properties for the YARP PolyDriver.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>yarp.Property</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeControllerPolyDriver.__driver__">
+<span class="sig-name descname"><span class="pre">__driver__</span></span><a class="headerlink" href="#pyicub.controllers.gaze.GazeControllerPolyDriver.__driver__" title="Link to this definition"></a></dt>
+<dd><p>The YARP PolyDriver instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>yarp.PolyDriver</p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py property">
 <dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeControllerPolyDriver.properties">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">properties</span></span><a class="headerlink" href="#pyicub.controllers.gaze.GazeControllerPolyDriver.properties" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Returns the properties of the YARP PolyDriver.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>yarp.Property</em> – The properties of the YARP PolyDriver.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeControllerPolyDriver.getDriver">
 <span class="sig-name descname"><span class="pre">getDriver</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyicub.controllers.gaze.GazeControllerPolyDriver.getDriver" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Returns the YARP PolyDriver instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>yarp.PolyDriver</em> – The YARP PolyDriver instance.</p>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
@@ -99,85 +145,235 @@
 <dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeController">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyicub.controllers.gaze.</span></span><span class="sig-name descname"><span class="pre">GazeController</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">robot</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyicub.controllers.gaze.GazeController" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>GazeController manages the gaze control of a robot using YARP.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeController.__logger__">
+<span class="sig-name descname"><span class="pre">__logger__</span></span><a class="headerlink" href="#pyicub.controllers.gaze.GazeController.__logger__" title="Link to this definition"></a></dt>
+<dd><p>Logger instance for logging information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Logger</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeController.__driver__">
+<span class="sig-name descname"><span class="pre">__driver__</span></span><a class="headerlink" href="#pyicub.controllers.gaze.GazeController.__driver__" title="Link to this definition"></a></dt>
+<dd><p>Instance of GazeControllerPolyDriver to manage the YARP PolyDriver.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#pyicub.controllers.gaze.GazeControllerPolyDriver" title="pyicub.controllers.gaze.GazeControllerPolyDriver">GazeControllerPolyDriver</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeController.__mot_id__">
+<span class="sig-name descname"><span class="pre">__mot_id__</span></span><a class="headerlink" href="#pyicub.controllers.gaze.GazeController.__mot_id__" title="Link to this definition"></a></dt>
+<dd><p>Motion ID counter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeController.__IGazeControl__">
+<span class="sig-name descname"><span class="pre">__IGazeControl__</span></span><a class="headerlink" href="#pyicub.controllers.gaze.GazeController.__IGazeControl__" title="Link to this definition"></a></dt>
+<dd><p>Interface for gaze control.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>IGazeControl</p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeController.isValid">
 <span class="sig-name descname"><span class="pre">isValid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyicub.controllers.gaze.GazeController.isValid" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Checks if the PolyDriver is valid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>bool</em> – True if the PolyDriver is valid, False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeController.init">
 <span class="sig-name descname"><span class="pre">init</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyicub.controllers.gaze.GazeController.init" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Initializes the gaze control interface and stops any ongoing control.</p>
+</dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeController.PolyDriver">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PolyDriver</span></span><a class="headerlink" href="#pyicub.controllers.gaze.GazeController.PolyDriver" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Returns the YARP PolyDriver instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>yarp.PolyDriver</em> – The YARP PolyDriver instance.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeController.IGazeControl">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">IGazeControl</span></span><a class="headerlink" href="#pyicub.controllers.gaze.GazeController.IGazeControl" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Returns the gaze control interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>IGazeControl</em> – The gaze control interface.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeController.blockEyes">
 <span class="sig-name descname"><span class="pre">blockEyes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vergence</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyicub.controllers.gaze.GazeController.blockEyes" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Blocks the eyes at the specified vergence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>vergence</strong> (<em>float</em>) – The vergence angle to block the eyes at.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeController.blockNeck">
 <span class="sig-name descname"><span class="pre">blockNeck</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyicub.controllers.gaze.GazeController.blockNeck" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Blocks the neck movements.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeController.clearEyes">
 <span class="sig-name descname"><span class="pre">clearEyes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyicub.controllers.gaze.GazeController.clearEyes" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Clears the eye movements.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeController.clearNeck">
 <span class="sig-name descname"><span class="pre">clearNeck</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyicub.controllers.gaze.GazeController.clearNeck" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Clears the neck movements.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeController.lookAtAbsAngles">
 <span class="sig-name descname"><span class="pre">lookAtAbsAngles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">azi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ele</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waitMotionDone</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyicub.controllers.gaze.GazeController.lookAtAbsAngles" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Looks at the specified absolute angles.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>azi</strong> (<em>float</em>) – Azimuth angle.</p></li>
+<li><p><strong>ele</strong> (<em>float</em>) – Elevation angle.</p></li>
+<li><p><strong>ver</strong> (<em>float</em>) – Vergence angle.</p></li>
+<li><p><strong>waitMotionDone</strong> (<em>bool</em>) – Whether to wait for the motion to complete.</p></li>
+<li><p><strong>timeout</strong> (<em>float</em>) – Timeout for waiting for the motion to complete.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeController.lookAtRelAngles">
 <span class="sig-name descname"><span class="pre">lookAtRelAngles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">azi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ele</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waitMotionDone</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyicub.controllers.gaze.GazeController.lookAtRelAngles" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Looks at the specified relative angles.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>azi</strong> (<em>float</em>) – Relative azimuth angle.</p></li>
+<li><p><strong>ele</strong> (<em>float</em>) – Relative elevation angle.</p></li>
+<li><p><strong>ver</strong> (<em>float</em>) – Relative vergence angle.</p></li>
+<li><p><strong>waitMotionDone</strong> (<em>bool</em>) – Whether to wait for the motion to complete.</p></li>
+<li><p><strong>timeout</strong> (<em>float</em>) – Timeout for waiting for the motion to complete.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeController.lookAtFixationPoint">
 <span class="sig-name descname"><span class="pre">lookAtFixationPoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waitMotionDone</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyicub.controllers.gaze.GazeController.lookAtFixationPoint" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Looks at the specified fixation point.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>float</em>) – X coordinate of the fixation point.</p></li>
+<li><p><strong>y</strong> (<em>float</em>) – Y coordinate of the fixation point.</p></li>
+<li><p><strong>z</strong> (<em>float</em>) – Z coordinate of the fixation point.</p></li>
+<li><p><strong>waitMotionDone</strong> (<em>bool</em>) – Whether to wait for the motion to complete.</p></li>
+<li><p><strong>timeout</strong> (<em>float</em>) – Timeout for waiting for the motion to complete.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeController.reset">
 <span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyicub.controllers.gaze.GazeController.reset" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Resets the gaze control by clearing the eyes and neck movements.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeController.setParams">
 <span class="sig-name descname"><span class="pre">setParams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">neck_tt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eyes_tt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyicub.controllers.gaze.GazeController.setParams" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Sets the trajectory times for the neck and eyes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>neck_tt</strong> (<em>float</em>) – Trajectory time for the neck.</p></li>
+<li><p><strong>eyes_tt</strong> (<em>float</em>) – Trajectory time for the eyes.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeController.setTrackingMode">
 <span class="sig-name descname"><span class="pre">setTrackingMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyicub.controllers.gaze.GazeController.setTrackingMode" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Sets the tracking mode.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>mode</strong> (<em>bool</em>) – True to enable tracking mode, False to disable.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeController.waitMotionDone">
 <span class="sig-name descname"><span class="pre">waitMotionDone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">period</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyicub.controllers.gaze.GazeController.waitMotionDone" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Waits for the motion to complete.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>period</strong> (<em>float</em>) – Period to check the motion status.</p></li>
+<li><p><strong>timeout</strong> (<em>float</em>) – Timeout for waiting for the motion to complete.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>bool</em> – True if the motion completed, False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeController.waitMotionOnset">
 <span class="sig-name descname"><span class="pre">waitMotionOnset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">speed_ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_attempts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyicub.controllers.gaze.GazeController.waitMotionOnset" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Waits for the motion onset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>speed_ref</strong> (<em>float</em>) – Reference speed to detect motion onset.</p></li>
+<li><p><strong>period</strong> (<em>float</em>) – Period to check the motion status.</p></li>
+<li><p><strong>max_attempts</strong> (<em>int</em>) – Maximum number of attempts to check the motion status.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>bool</em> – True if the motion onset is detected, False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
