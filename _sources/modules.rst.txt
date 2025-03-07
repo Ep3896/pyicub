@@ -5,4 +5,3 @@ pyicub
    :maxdepth: 4
 
    pyicub
-   setup
