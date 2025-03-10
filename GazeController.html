@@ -50,25 +50,25 @@
 <li class="toctree-l2"><a class="reference internal" href="PositionController.html">PositionController package</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">GazeController package</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#module-GazeController.lookat">GazeController.lookat module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#lookat-py">1.lookat.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lookat-py">lookat.py</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#GazeController.lookat.look_at_fixation_point"><code class="docutils literal notranslate"><span class="pre">look_at_fixation_point()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#GazeController.lookat.reset_gaze_to_neutral"><code class="docutils literal notranslate"><span class="pre">reset_gaze_to_neutral()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#module-GazeController.lookat_timeout">GazeController.lookat_timeout module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#lookat-timeout-py">2.lookat_timeout.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lookat-timeout-py">lookat_timeout.py</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#GazeController.lookat_timeout.set_gaze_absolute"><code class="docutils literal notranslate"><span class="pre">set_gaze_absolute()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#GazeController.lookat_timeout.execute_gaze_sequence"><code class="docutils literal notranslate"><span class="pre">execute_gaze_sequence()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#module-GazeController.lookat_events">GazeController.lookat_events module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#lookat-events-py">3.lookat_events.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lookat-events-py">lookat_events.py</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#GazeController.lookat_events.look_at_fixation_point_with_events"><code class="docutils literal notranslate"><span class="pre">look_at_fixation_point_with_events()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#GazeController.lookat_events.reset_gaze_to_neutral"><code class="docutils literal notranslate"><span class="pre">reset_gaze_to_neutral()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#module-GazeController.lookat_portmonitor">GazeController.lookat_portmonitor module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#lookat-portmonitor-py">4.lookat_portmonitor.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lookat-portmonitor-py">lookat_portmonitor.py</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#GazeController.lookat_portmonitor.af1"><code class="docutils literal notranslate"><span class="pre">af1()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#GazeController.lookat_portmonitor.cb1"><code class="docutils literal notranslate"><span class="pre">cb1()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#GazeController.lookat_portmonitor.monitor_gaze"><code class="docutils literal notranslate"><span class="pre">monitor_gaze()</span></code></a></li>
@@ -113,7 +113,7 @@
 <section id="module-GazeController.lookat">
 <span id="gazecontroller-lookat-module"></span><h2>GazeController.lookat module<a class="headerlink" href="#module-GazeController.lookat" title="Link to this heading"></a></h2>
 <section id="lookat-py">
-<h3>1.lookat.py<a class="headerlink" href="#lookat-py" title="Link to this heading"></a></h3>
+<h3>lookat.py<a class="headerlink" href="#lookat-py" title="Link to this heading"></a></h3>
 <p>This script controls the gaze movement of the iCub humanoid robot. It demonstrates
 how to direct the robot’s gaze to a specific 3D point and then reset its gaze
 to an absolute angle.</p>
@@ -176,7 +176,7 @@ and vergence (<cite>ver</cite>) angles to zero.</p></li>
 <section id="module-GazeController.lookat_timeout">
 <span id="gazecontroller-lookat-timeout-module"></span><h2>GazeController.lookat_timeout module<a class="headerlink" href="#module-GazeController.lookat_timeout" title="Link to this heading"></a></h2>
 <section id="lookat-timeout-py">
-<h3>2.lookat_timeout.py<a class="headerlink" href="#lookat-timeout-py" title="Link to this heading"></a></h3>
+<h3>lookat_timeout.py<a class="headerlink" href="#lookat-timeout-py" title="Link to this heading"></a></h3>
 <p>This script controls the gaze movement of the iCub humanoid robot with a timeout feature.
 It demonstrates how to direct the robot’s gaze to absolute angles while enforcing a
 timeout constraint on specific gaze operations.</p>
@@ -251,7 +251,7 @@ If None, the motion executes without a timeout (default: None).</p>
 <section id="module-GazeController.lookat_events">
 <span id="gazecontroller-lookat-events-module"></span><h2>GazeController.lookat_events module<a class="headerlink" href="#module-GazeController.lookat_events" title="Link to this heading"></a></h2>
 <section id="lookat-events-py">
-<h3>3.lookat_events.py<a class="headerlink" href="#lookat-events-py" title="Link to this heading"></a></h3>
+<h3>lookat_events.py<a class="headerlink" href="#lookat-events-py" title="Link to this heading"></a></h3>
 <p>This script controls the gaze movement of the iCub humanoid robot with event-based motion monitoring.
 It demonstrates how to direct the robot’s gaze to a specific point, detect the motion onset,
 wait for the motion to complete, and reset the gaze.</p>
@@ -325,7 +325,7 @@ and vergence (<cite>ver</cite>) angles to zero.</p></li>
 <section id="module-GazeController.lookat_portmonitor">
 <span id="gazecontroller-lookat-portmonitor-module"></span><h2>GazeController.lookat_portmonitor module<a class="headerlink" href="#module-GazeController.lookat_portmonitor" title="Link to this heading"></a></h2>
 <section id="lookat-portmonitor-py">
-<h3>4.lookat_portmonitor.py<a class="headerlink" href="#lookat-portmonitor-py" title="Link to this heading"></a></h3>
+<h3>lookat_portmonitor.py<a class="headerlink" href="#lookat-portmonitor-py" title="Link to this heading"></a></h3>
 <p>This script controls the gaze movement of the iCub humanoid robot using YARP port monitoring.
 It demonstrates how to monitor gaze angles and trigger specific actions when the gaze reaches
 a predefined position.</p>
