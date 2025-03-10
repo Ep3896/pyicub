@@ -101,6 +101,9 @@
              
   <section id="module-pyicub.controllers.position">
 <span id="pyicub-controllers-position"></span><h1>pyicub.controllers.position<a class="headerlink" href="#module-pyicub.controllers.position" title="Link to this heading"></a></h1>
+<p>Module: position.py</p>
+<p>This module provides classes and functionalities to manage the position control of iCub robot parts using YARP.
+It includes definitions for robot parts, joint configurations, and controllers to move and control the joints of the robot.</p>
 <p class="rubric">Classes</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
@@ -340,12 +343,60 @@ yarp.PolyDriver: PolyDriver instance controlling the robot part.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyicub.controllers.position.PositionController.stop">
 <span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">joints_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyicub.controllers.position.PositionController.stop" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Stops the movement of specified joints by setting their reference speed to zero.</p>
+<section id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>joints_list<span class="classifier">list of int, optional</span></dt><dd><p>List of joint indices to stop. If None, all joints will be stopped. Default is None.</p>
+</dd>
+</dl>
+</section>
+<section id="returns">
+<h2>Returns<a class="headerlink" href="#returns" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>float</dt><dd><p>Always returns 0.0.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyicub.controllers.position.PositionController.move">
 <span class="sig-name descname"><span class="pre">move</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../pyicub.controllers.html#pyicub.controllers.position.JointPose" title="pyicub.controllers.position.JointPose"><span class="pre">JointPose</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">req_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">30.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joints_speed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[10.0]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waitMotionDone</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyicub.controllers.position.PositionController.move" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Moves the robot to the specified joint positions.
+Parameters
+———-
+pose : JointPose</p>
+<blockquote>
+<div><p>The target joint positions and the list of joints to move.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>req_time<span class="classifier">float, optional</span></dt><dd><p>The requested time to complete the motion (default is 0.0).</p>
+</dd>
+<dt>timeout<span class="classifier">float, optional</span></dt><dd><p>The maximum time to wait for the motion to complete (default is DEFAULT_TIMEOUT).</p>
+</dd>
+<dt>joints_speed<span class="classifier">list, optional</span></dt><dd><p>The speed for each joint (default is an empty list, which sets all speeds to 10.0).</p>
+</dd>
+<dt>waitMotionDone<span class="classifier">bool, optional</span></dt><dd><p>Whether to wait for the motion to complete before returning (default is True).</p>
+</dd>
+<dt>tag<span class="classifier">str, optional</span></dt><dd><p>A tag for logging purposes (default is ‘default’).</p>
+</dd>
+</dl>
+<section id="id1">
+<h2>Returns<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>bool</dt><dd><p>True if the motion completed successfully, False if it timed out.</p>
+</dd>
+</dl>
+</section>
+<section id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Link to this heading"></a></h2>
+<p>This method sets the position control mode for the specified joints,
+initiates the motion, and optionally waits for the motion to complete.
+It logs the start and end of the motion, including whether it completed
+successfully or timed out.</p>
+</section>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyicub.controllers.position.PositionController.setPositionControlMode">

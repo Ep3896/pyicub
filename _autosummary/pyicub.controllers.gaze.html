@@ -285,22 +285,76 @@ IGazeControl: The gaze control interface.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeController.lookAtAbsAngles">
 <span class="sig-name descname"><span class="pre">lookAtAbsAngles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">azi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ele</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waitMotionDone</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyicub.controllers.gaze.GazeController.lookAtAbsAngles" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Commands the gaze controller to look at the specified absolute angles.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>azi</strong> (<em>float</em>) – Azimuth angle in degrees.</p></li>
+<li><p><strong>ele</strong> (<em>float</em>) – Elevation angle in degrees.</p></li>
+<li><p><strong>ver</strong> (<em>float</em>) – Vergence angle in degrees.</p></li>
+<li><p><strong>waitMotionDone</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, the method will wait until the motion is completed.</p></li>
+<li><p><strong>timeout</strong> (<em>float</em><em>, </em><em>optional</em>) – Maximum time to wait for the motion to complete, in seconds. A value of 0.0 means no timeout.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeController.lookAtRelAngles">
 <span class="sig-name descname"><span class="pre">lookAtRelAngles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">azi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ele</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waitMotionDone</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyicub.controllers.gaze.GazeController.lookAtRelAngles" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Directs the gaze to the specified relative angles.</p>
+<section id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>azi<span class="classifier">float</span></dt><dd><p>The azimuth angle in degrees.</p>
+</dd>
+<dt>ele<span class="classifier">float</span></dt><dd><p>The elevation angle in degrees.</p>
+</dd>
+<dt>ver<span class="classifier">float</span></dt><dd><p>The vergence angle in degrees.</p>
+</dd>
+<dt>waitMotionDone<span class="classifier">bool, optional</span></dt><dd><p>If True, the method waits until the motion is completed (default is True).</p>
+</dd>
+<dt>timeout<span class="classifier">float, optional</span></dt><dd><p>The maximum time to wait for the motion to complete in seconds (default is 0.0, which means no timeout).</p>
+</dd>
+</dl>
+</section>
+<section id="returns">
+<h2>Returns<a class="headerlink" href="#returns" title="Link to this heading"></a></h2>
+<p>None</p>
+</section>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeController.lookAtFixationPoint">
 <span class="sig-name descname"><span class="pre">lookAtFixationPoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waitMotionDone</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyicub.controllers.gaze.GazeController.lookAtFixationPoint" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Directs the gaze to a specified fixation point in 3D space.</p>
+<section id="id1">
+<h2>Parameters<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>x<span class="classifier">float</span></dt><dd><p>The x-coordinate of the fixation point.</p>
+</dd>
+<dt>y<span class="classifier">float</span></dt><dd><p>The y-coordinate of the fixation point.</p>
+</dd>
+<dt>z<span class="classifier">float</span></dt><dd><p>The z-coordinate of the fixation point.</p>
+</dd>
+<dt>waitMotionDone<span class="classifier">bool, optional</span></dt><dd><p>If True, the method waits until the motion is completed (default is True).</p>
+</dd>
+<dt>timeout<span class="classifier">float, optional</span></dt><dd><p>The maximum time to wait for the motion to complete in seconds (default is 0.0).</p>
+</dd>
+</dl>
+</section>
+<section id="id2">
+<h2>Returns<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p>None</p>
+</section>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeController.reset">
 <span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyicub.controllers.gaze.GazeController.reset" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Reset the gaze controller by clearing the eyes and neck positions.</p>
+<p>This method calls <cite>clearEyes</cite> to reset the eye positions and <cite>clearNeck</cite> to reset the neck positions.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeController.setParams">

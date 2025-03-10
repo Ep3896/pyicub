@@ -259,22 +259,76 @@ IGazeControl: The gaze control interface.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeController.lookAtAbsAngles">
 <span class="sig-name descname"><span class="pre">lookAtAbsAngles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">azi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ele</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waitMotionDone</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyicub.controllers.gaze.GazeController.lookAtAbsAngles" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Commands the gaze controller to look at the specified absolute angles.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>azi</strong> (<em>float</em>) – Azimuth angle in degrees.</p></li>
+<li><p><strong>ele</strong> (<em>float</em>) – Elevation angle in degrees.</p></li>
+<li><p><strong>ver</strong> (<em>float</em>) – Vergence angle in degrees.</p></li>
+<li><p><strong>waitMotionDone</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, the method will wait until the motion is completed.</p></li>
+<li><p><strong>timeout</strong> (<em>float</em><em>, </em><em>optional</em>) – Maximum time to wait for the motion to complete, in seconds. A value of 0.0 means no timeout.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeController.lookAtRelAngles">
 <span class="sig-name descname"><span class="pre">lookAtRelAngles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">azi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ele</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waitMotionDone</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyicub.controllers.gaze.GazeController.lookAtRelAngles" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Directs the gaze to the specified relative angles.</p>
+<section id="parameters">
+<h3>Parameters<a class="headerlink" href="#parameters" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>azi<span class="classifier">float</span></dt><dd><p>The azimuth angle in degrees.</p>
+</dd>
+<dt>ele<span class="classifier">float</span></dt><dd><p>The elevation angle in degrees.</p>
+</dd>
+<dt>ver<span class="classifier">float</span></dt><dd><p>The vergence angle in degrees.</p>
+</dd>
+<dt>waitMotionDone<span class="classifier">bool, optional</span></dt><dd><p>If True, the method waits until the motion is completed (default is True).</p>
+</dd>
+<dt>timeout<span class="classifier">float, optional</span></dt><dd><p>The maximum time to wait for the motion to complete in seconds (default is 0.0, which means no timeout).</p>
+</dd>
+</dl>
+</section>
+<section id="returns">
+<h3>Returns<a class="headerlink" href="#returns" title="Link to this heading"></a></h3>
+<p>None</p>
+</section>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeController.lookAtFixationPoint">
 <span class="sig-name descname"><span class="pre">lookAtFixationPoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waitMotionDone</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyicub.controllers.gaze.GazeController.lookAtFixationPoint" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Directs the gaze to a specified fixation point in 3D space.</p>
+<section id="id1">
+<h3>Parameters<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>x<span class="classifier">float</span></dt><dd><p>The x-coordinate of the fixation point.</p>
+</dd>
+<dt>y<span class="classifier">float</span></dt><dd><p>The y-coordinate of the fixation point.</p>
+</dd>
+<dt>z<span class="classifier">float</span></dt><dd><p>The z-coordinate of the fixation point.</p>
+</dd>
+<dt>waitMotionDone<span class="classifier">bool, optional</span></dt><dd><p>If True, the method waits until the motion is completed (default is True).</p>
+</dd>
+<dt>timeout<span class="classifier">float, optional</span></dt><dd><p>The maximum time to wait for the motion to complete in seconds (default is 0.0).</p>
+</dd>
+</dl>
+</section>
+<section id="id2">
+<h3>Returns<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<p>None</p>
+</section>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeController.reset">
 <span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyicub.controllers.gaze.GazeController.reset" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Reset the gaze controller by clearing the eyes and neck positions.</p>
+<p>This method calls <cite>clearEyes</cite> to reset the eye positions and <cite>clearNeck</cite> to reset the neck positions.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyicub.controllers.gaze.GazeController.setParams">
@@ -325,6 +379,9 @@ IGazeControl: The gaze control interface.</p>
 </section>
 <section id="module-pyicub.controllers.position">
 <span id="pyicub-controllers-position-module"></span><h2>pyicub.controllers.position module<a class="headerlink" href="#module-pyicub.controllers.position" title="Link to this heading"></a></h2>
+<p>Module: position.py</p>
+<p>This module provides classes and functionalities to manage the position control of iCub robot parts using YARP.
+It includes definitions for robot parts, joint configurations, and controllers to move and control the joints of the robot.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyicub.controllers.position.ICUB_PARTS">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyicub.controllers.position.</span></span><span class="sig-name descname"><span class="pre">ICUB_PARTS</span></span><a class="headerlink" href="#pyicub.controllers.position.ICUB_PARTS" title="Link to this definition"></a></dt>
@@ -549,12 +606,60 @@ yarp.PolyDriver: PolyDriver instance controlling the robot part.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyicub.controllers.position.PositionController.stop">
 <span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">joints_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyicub.controllers.position.PositionController.stop" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Stops the movement of specified joints by setting their reference speed to zero.</p>
+<section id="id3">
+<h3>Parameters<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>joints_list<span class="classifier">list of int, optional</span></dt><dd><p>List of joint indices to stop. If None, all joints will be stopped. Default is None.</p>
+</dd>
+</dl>
+</section>
+<section id="id4">
+<h3>Returns<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>float</dt><dd><p>Always returns 0.0.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyicub.controllers.position.PositionController.move">
 <span class="sig-name descname"><span class="pre">move</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pyicub.controllers.position.JointPose" title="pyicub.controllers.position.JointPose"><span class="pre">JointPose</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">req_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">30.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joints_speed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[10.0]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waitMotionDone</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyicub.controllers.position.PositionController.move" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Moves the robot to the specified joint positions.
+Parameters
+———-
+pose : JointPose</p>
+<blockquote>
+<div><p>The target joint positions and the list of joints to move.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>req_time<span class="classifier">float, optional</span></dt><dd><p>The requested time to complete the motion (default is 0.0).</p>
+</dd>
+<dt>timeout<span class="classifier">float, optional</span></dt><dd><p>The maximum time to wait for the motion to complete (default is DEFAULT_TIMEOUT).</p>
+</dd>
+<dt>joints_speed<span class="classifier">list, optional</span></dt><dd><p>The speed for each joint (default is an empty list, which sets all speeds to 10.0).</p>
+</dd>
+<dt>waitMotionDone<span class="classifier">bool, optional</span></dt><dd><p>Whether to wait for the motion to complete before returning (default is True).</p>
+</dd>
+<dt>tag<span class="classifier">str, optional</span></dt><dd><p>A tag for logging purposes (default is ‘default’).</p>
+</dd>
+</dl>
+<section id="id5">
+<h3>Returns<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>bool</dt><dd><p>True if the motion completed successfully, False if it timed out.</p>
+</dd>
+</dl>
+</section>
+<section id="notes">
+<h3>Notes<a class="headerlink" href="#notes" title="Link to this heading"></a></h3>
+<p>This method sets the position control mode for the specified joints,
+initiates the motion, and optionally waits for the motion to complete.
+It logs the start and end of the motion, including whether it completed
+successfully or timed out.</p>
+</section>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyicub.controllers.position.PositionController.setPositionControlMode">
