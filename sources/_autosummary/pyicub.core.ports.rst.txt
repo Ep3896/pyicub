@@ -1,4 +1,4 @@
-﻿pyicub.core.ports
+pyicub.core.ports
 =================
 
 .. automodule:: pyicub.core.ports
@@ -11,4 +11,5 @@
       BufferedPort
       BufferedReadPort
       BufferedWritePort
+      CustomCallback
    
