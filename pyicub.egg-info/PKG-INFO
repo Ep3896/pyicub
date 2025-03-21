@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: pyicub
+Version: 8.2.7
+Summary: Developing iCub applications using Python
+Home-page: http://github.com/s4hri/pyicub
+Author: Davide De Tommaso, Adam Lukomski, Nicola Russi
+Author-email: davide.detommaso@iit.it, adam.lukomski@iit.it, nicola.russi@iit.it
+License: BSD-2
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: summary
