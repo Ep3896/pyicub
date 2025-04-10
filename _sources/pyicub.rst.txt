@@ -22,14 +22,6 @@ pyicub.actions module
    :show-inheritance:
    :undoc-members:
 
-pyicub.attention module
------------------------
-
-.. automodule:: pyicub.attention
-   :members:
-   :show-inheritance:
-   :undoc-members:
-
 pyicub.fsm module
 -----------------
 
