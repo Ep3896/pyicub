@@ -1,7 +1,6 @@
 ![PYICUB logo](media/pyicub-logo.png?raw=true)
 ====
 
-TEST PUSH
 Introduction
 -------------
 [PYICUB](https://github.com/s4hri/pyicub) is a framework for developing iCub applications using Python.
